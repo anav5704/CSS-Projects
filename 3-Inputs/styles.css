@@ -1,0 +1,327 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+
+}
+
+section {
+    height: 100vh;
+    width: 1080px;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    justify-content: space-evenly;
+
+}  
+
+.simple input::selection {
+    background-color: blueviolet;
+    color: white;
+}
+
+input {
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    font-size: 1.5rem;
+    transition: all .3s ease;
+    outline: none;
+}
+
+.simple input {
+    border: 2px solid rgba(128, 128, 128, 0.305);
+    caret-color: blueviolet;
+    border-radius: 10px;
+}
+
+.simple input:focus {
+    border: 2px solid blueviolet;
+    caret-color: blueviolet;
+    color: blueviolet;
+}
+
+.fancy input {
+    position: relative;
+    background: transparent;
+    border: none;
+    caret-color: white;
+    color: white;
+    z-index: 1;
+}
+
+.box {
+    width: 300px;
+    margin: auto;
+    position: relative;
+}
+
+.fancy span {
+    color: blueviolet;
+    position: absolute;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    padding: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: all .3s ease;
+}
+
+.fancy input:valid ~ i ,
+.fancy input:focus ~ i {
+    height: 100%;
+}
+
+.fancy i {
+    margin: auto;
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 342px;
+    background: blueviolet;
+    z-index: -1;
+    transition: all .3s ease;
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.fancy input:valid ~ span, 
+.fancy input:focus ~ span {
+    transform: translate(-20px, -90px);
+
+}
+
+.fancy input::selection {
+    background-color: white;
+    color: blueviolet;
+}
+
+.overkill {
+    position: relative;
+    background: rgba(0, 0, 0, 0);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.overkill input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    border-radius: 10px;
+    border: 2px solid white;
+    transition: all .3s ease;
+    color: blueviolet;
+}
+
+.overkill input::selection {
+    background-color: blueviolet;
+    color: white;
+}
+
+.top {
+    display: flex;
+   justify-content: center;
+   align-items:flex-end;
+    height: 50vh;
+    background-color: white;
+    color: blueviolet;
+    font-size: 1.5rem;
+    overflow: hidden;
+    transition: all .5s ease;
+    pointer-events: none;
+}
+
+.bottom {
+    overflow: hidden;
+    text-align: center;
+    height: 50vh;
+    color: blueviolet;
+    background-color: white;
+    font-size: 1.5rem;
+    transition: all .5s ease;
+    pointer-events: none;
+}
+
+.top h1 {
+    transform: translateY(50%);
+    }
+
+.bottom h1 {
+    transform: translateY(-50%);
+}
+
+.overkill input:focus ,
+.overkill input:valid{
+    opacity: 1;
+    box-shadow: 0px 0px 20px 2px rgb(0, 0, 0, 0.1);
+}
+
+.overkill input:focus ~ .top,
+.overkill input:valid ~ .top {
+    transform: translateY(-15vh);
+    font-size: 5rem;
+}
+
+.overkill input:focus ~ .bottom ,
+.overkill input:valid ~ .bottom{
+    transform: translateY(15vh);
+    font-size: 5rem;
+}
+
+
+.context {
+    width: 100%;
+    position: absolute;
+    top:50vh;
+    
+}
+
+.context h1{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+
+.background {
+     position: relative;
+}
+
+.area{
+    position: absolute;
+    background: blueviolet;  
+    width: 100%;
+    height:50vh;
+    margin-top: 25vh;
+    z-index: -1;   
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    animation: animate 10s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
