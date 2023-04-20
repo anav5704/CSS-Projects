@@ -1,0 +1,242 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+}
+
+:root {
+    --purple: #400062;
+    --warm: #EBEBEB;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: blueviolet;
+}
+
+section {
+    height: 100vh;
+    width: 1080px;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    justify-content: space-evenly;
+}   
+
+.simple .socials span{
+    display: inline-flex;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+   justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 2rem;
+    margin: 0 10px;
+    transition: all .3s ease;
+    cursor: pointer;
+    color: black;
+    box-shadow: rgba(42, 42, 42, 0.3) 0px 7px 29px 0px;
+}
+
+.simple .socials span:hover{
+  transform:translateY(-10px);
+}
+.socials {
+    margin: auto;
+    /* scale: 2; */
+}
+
+.fancy .socials span{
+    display: inline-flex;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+   justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 2rem;
+    margin: 0 10px;
+    transition: all .3s ease;
+    cursor: pointer;
+    color: white;
+    box-shadow: rgba(42, 42, 42, 0.3) 0px 7px 29px 0px;
+    position: relative;
+    border: 2px solid white;
+}
+
+.fancy .socials span p{
+    position:absolute;
+    transform: translateY(50px);
+    rotate: 90deg;
+    background-color: aqua;
+    pointer-events: none;
+    transition: all .3s ease;
+    opacity: 0;
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 10px;    
+    box-shadow: rgba(42, 42, 42, 0.3) 0px 7px 29px 0px;
+    color: black;
+
+}
+
+.fancy .socials span:hover p{
+    position:absolute;
+    transform: translateY(50px);
+    rotate: 0deg;
+    background-color:white;
+    opacity: 1;
+}
+
+.fancy .socials:hover span{
+    opacity: .2;
+}
+
+.fancy .socials span:hover{
+    opacity: 1;
+}
+
+ .fancy .socials span:nth-child(1) {
+    background: #f09433; 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+}
+
+.fancy .socials span:nth-child(2) {
+    background: #3b5998 ; 
+}
+
+.fancy .socials span:nth-child(3) {
+    background: #FF0000  ; 
+}
+
+.fancy .socials span:nth-child(4) {
+    background: #6441a5 ; 
+}
+
+.fancy .socials span:nth-child(5) {
+    background: linear-gradient(45deg,  #FE2C55 0%,#25F4EE 100%); 
+}
+
+.fancy .socials span:nth-child(6) {
+    background: #00acee  ; 
+}
+
+
+.overkill .minicontainer {
+    height: 50px;
+    width: 50px;
+    background-color:var(--purple);
+    border: 2px solid var(--purple) ;
+    color: white;
+    border-radius: 50%;
+    position: relative;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.overkill .minicontainer:hover {
+    border: 2px solid white ;
+
+}
+
+.overkill .minicontainer span {
+    background-color:var(--purple);
+    color: white;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    justify-content: center;  
+    align-items: center;
+    display: inline-flex;
+    transition: all .3s ease;
+    cursor: pointer;
+    position: absolute;
+    border: 2px solid var(--purple);
+    box-shadow: none;
+
+}
+
+.overkill .minicontainer .socials {
+    position: absolute;
+    height: 265px;
+    width: 265px;
+    position: absolute;
+    rotate: -90deg;
+    transition: all .5s cubic-bezier(0.175, .7, 0.32, 1.35);
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0;
+    z-index: -1;
+}
+
+.overkill .minicontainer .socials span:nth-child(1) {
+    top: 60px;
+    left: 20px;
+}
+
+.overkill .minicontainer .socials span:nth-child(2) {
+    top: 60px;
+    right: 20px;
+}
+
+.overkill .minicontainer .socials span:nth-child(3) {
+    bottom: 60px;
+    right: 20px;
+}
+
+.overkill .minicontainer .socials span:nth-child(4) {
+    bottom: 60px;
+    left: 20px;
+}
+
+.overkill .minicontainer .socials span:nth-child(5) {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.overkill .minicontainer .socials span:nth-child(6) {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.overkill .minicontainer:hover .socials{
+    rotate: 0deg;
+    opacity: 1;
+    scale: 1;
+    z-index: 0;
+}
+
+.overkill .minicontainer .socials span:hover {
+    animation: shake 1s linear infinite;
+    border: 2px solid white;
+    box-shadow: rgba(42, 42, 42, 0.3) 0px 7px 29px 0px;
+}
+
+
+
+
+
+
+
+
