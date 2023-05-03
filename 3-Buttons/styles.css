@@ -1,8 +1,8 @@
 /* Made with 💙 by Anav */
 
 :root {
-    --main:#3a5097;
-    --accent:#80b0da;
+    --main:red;
+    --accent:white;
 }
 
 * {
@@ -16,6 +16,7 @@ html {
     scroll-snap-type: y mandatory;
 }
 
+
 body::-webkit-scrollbar {
     display: none;
   }
@@ -25,27 +26,23 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;    
-    background-color: var(--accent);
+    background-color: white;
 }
 
 section {
-    padding-top: 20vh;
-    padding-bottom: 20vh;
-    height: 60vh;
+    height: 100vh;
     width: 1080px;
     display: flex;
     flex-direction: column;
     scroll-snap-align: start;
     justify-content: space-evenly;
-    border-left: 2px solid red;
-    border-right: 2px solid red;
 }   
 
 .simple button {
     transition: all .3s ease;
     border-radius: 10px;
     font-size: 2rem;
-    margin: 0 auto;
+    margin: 0px auto;
     cursor: pointer;
     background-color: var(--accent);
     border: 2px solid var(--main);
@@ -72,7 +69,7 @@ section {
     border-radius: 10px;
     position: relative;
     font-size: 2rem;
-    margin: auto;
+    margin:  auto;
     cursor: pointer;
     border: 2px solid var(--main);
     color: white;
