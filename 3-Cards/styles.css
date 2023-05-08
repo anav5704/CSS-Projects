@@ -1,0 +1,314 @@
+/* Made with 💙 by Anav */
+
+:root {
+    --main:#400062;
+    --accent:#282A30;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    background-color:var(--accent);
+
+}
+
+section {
+    height: 100vh;
+    width: 1080px;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    align-items: center;
+    justify-content: center;
+} 
+
+.simple .card {
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+    background-color: red;
+}
+
+.simple .card .sec {
+   width: 100%;
+}
+
+.img {
+    background-color: whitesmoke;
+    height: 250px;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0 ;
+    position: relative;
+}
+
+.img img {
+    width: 100%;
+    scale: 0.95;
+    border-radius: 20px;
+
+}
+.info {
+    background-color: whitesmoke;    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100px;
+    position: relative;
+}
+
+.info h2 , .info p {
+    padding-left: 20px;
+}
+
+.info p i {
+    margin: 5px;
+}
+
+.btn {
+    background-color: whitesmoke;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    border-radius: 0 0 20px 20px;
+}
+
+.btn button {
+    padding: 10px 20px;
+    margin-left: 20px;
+    border-radius: 15px;
+    height: 45px;
+    font-size: 1.2rem;
+    border: none;
+    border: 2px solid rgb(227, 227, 227);
+    background-color:rgb(227, 227, 227);
+    transition: all .3s ease;
+}
+
+.btn button:hover {
+    cursor: pointer;
+    background-color:whitesmoke;
+}
+
+.btn i {
+    margin-right: 20px;
+    display: inline-flex;
+    padding: 15px;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    justify-content: center;
+    align-items: center;    
+    font-size: 1.6rem;
+    border: 2px solid rgb(227, 227, 227);
+    background-color:whitesmoke;
+    transition: all .3s ease;
+}
+
+.btn i:hover {
+    background-color:rgb(227, 227, 227);
+    cursor: pointer;
+}
+
+.btn::before {
+    position: absolute;
+    content: '';
+    background-color:rgb(227, 227, 227);
+    width: 80%;
+    height: 2px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+.fancy {
+    background: url(https://wallpapercave.com/wp/wp8115072.png);
+    background-size: cover;
+}
+
+.fancy .card {
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.fancy .card .img img {
+    scale: 1;
+}
+
+.fancy .card .img  {
+    transition: all .3s ease;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    z-index: 2;
+}
+
+.fancy .card .info , .overkill .card .info{
+    border-radius: 0px 0px 20px 20px;
+    text-align: center;
+    background: transparent;
+    height: 150px;
+
+}
+
+.fancy .card .info p ,.overkill .card .info p {
+    font-size: 1.4rem;
+}
+
+.fancy .card .info i{
+    color: rgb(222, 200, 35);
+}
+
+
+.play {
+    position: absolute;
+    content: '';
+    height: 40px;
+    width: 40px;
+    background-color: rgb(125, 125, 125);
+    border-radius: 50%;
+    right: 15px;
+    top: -40px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease ;
+}
+
+.fancy .card:hover .img {
+    clip-path: polygon(0 0, 100% 0, 100% 78%, 0% 100%);
+
+}
+
+.play:hover {
+    scale: 1.15;
+    cursor: pointer;
+}
+
+.overkill .card {
+    height: 400px;
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+    background-color: rgb(250, 151, 248);
+    transform-style: preserve-3d;
+    transition: box-shadow .7s ease;
+
+}
+
+.overkill .card .img {
+  position: relative;
+  overflow: visible;
+
+}
+
+.overkill .card .img img{
+ scale:1 ;
+ border-radius: 20px 20px 0px 0px;
+}
+
+.character {
+    position: absolute;
+    left: 0;
+    bottom: -20.5px;
+    transition: all .5s ease;
+    scale: .9 !important;
+}
+
+.overkill .card .info  {
+    transform: translateZ(30px);
+}
+
+.overkill .card .info i {
+    transition: all 0.5s ease;
+}
+
+.overkill .card:hover .info i {
+    animation: jump 1.3s linear infinite;
+    margin: 10px;
+}
+
+.overkill .card .info i:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.overkill .card .info i:nth-child(2) {
+    animation-delay: .3s;
+}
+
+.overkill .card .info i:nth-child(3) {
+    animation-delay: .6s;
+}
+
+.overkill .card .info i:nth-child(4) {
+    animation-delay: .9s;
+}
+
+.overkill .card .info i:nth-child(5) {
+    animation-delay: 1.2s;
+}
+
+.overkill .card:hover .character {
+    scale: 1.1 !important;
+    bottom: 9px;
+}
+
+.overkill .card:hover {
+    box-shadow: 0 0 80px 10px rgb(250, 151, 248);
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(15px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+
+
+
+
+
