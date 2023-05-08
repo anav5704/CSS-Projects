@@ -1,0 +1,58 @@
+/* Made with 💙 by Anav */
+
+:root {
+    --main:#282A30;
+    --accent:#282A30;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+    background-color: var(--main);
+}
+
+.carousel::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: wheat;
+   
+  }
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent)
+}
+
+.carousel {
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    border-radius: 10px;
+    display: flex;
+    overflow-x: scroll;
+    height: 300px;
+    aspect-ratio: 15/9;
+    margin-bottom: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+img {
+    width: 100%;
+    scroll-snap-align: start;
+}
+
+.btns a {
+    text-decoration: none;
+    margin: 10px;  
+    color: wheat;
+    font-size: 1.5rem;
+}
