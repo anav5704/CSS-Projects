@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/45f1e4db6d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Azeret+Mono&family=Bodoni+Moda:opsz@6..96&family=Carter+One&family=Ceviche+One&family=Courgette&family=Dancing+Script:wght@500&family=El+Messiri&family=Expletus+Sans:ital@1&family=Imprima&family=Manrope&family=Merienda&family=Montserrat&family=Oxygen&family=Patrick+Hand&family=Permanent+Marker&family=Piazzolla:opsz@8..30&family=Puritan&family=Raleway+Dots&family=Satisfy&family=Sora&family=Source+Code+Pro:wght@500&family=Vidaloka&family=Yatra+One&family=Yeseva+One&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="container">
+    <section class="simple">
+        <input type="checkbox" id="checkbox1" class="checkbox1 visuallyHidden">
+        <label for="checkbox1">
+            <div class="hamburger hamburger1">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+                <span class="bar bar4"></span>
+            </div>
+        </label>
+    </section>
+        
+    <section class="fancy">
+        <svg class="hamm hamRotate ham8" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+            <path
+                  class="line top"
+                  d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+            <path
+                  class="line middle"
+                  d="m 30,50 h 40" />
+            <path
+                  class="line bottom"
+                  d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+          </svg>
+    </section>
+
+    <section class="overkill">
+        <svg>
+            <defs>
+              <filter id="gooeyness">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="gooeyness" />
+                <feComposite in="SourceGraphic" in2="gooeyness" operator="atop" />
+              </filter>
+            </defs>
+          </svg>
+          <div class="plates">
+        <div class="plate plate2" onclick="this.classList.toggle('active')">
+            <svg class="burger" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+              <path class="line line1" d="M 50,65 H 70 C 70,65 75,65.198488 75,70.762712 C 75,73.779026 74.368822,78.389831 66.525424,78.389831 C 22.092231,78.389831 -18.644068,-30.508475 -18.644068,-30.508475" />
+              <path class="line line2" d="M 50,35 H 70 C 70,35 81.355932,35.300135 81.355932,25.635593 C 81.355932,20.906215 78.841706,14.830508 72.881356,14.830508 C 35.648232,14.830508 -30.508475,84.322034 -30.508475,84.322034" />
+              <path class="line line3" d="M 50,50 H 30 C 30,50 12.288136,47.749959 12.288136,60.169492 C 12.288136,67.738339 16.712974,73.305085 40.677966,73.305085 C 73.791674,73.305085 108.47458,-19.915254 108.47458,-19.915254" />
+              <path class="line line4" d="M 50,50 H 70 C 70,50 81.779661,50.277128 81.779661,36.607372 C 81.779661,28.952694 77.941689,25 69.067797,25 C 39.95532,25 -16.949153,119.91525 -16.949153,119.91525" />
+              <path class="line line5" d="M 50,65 H 30 C 30,65 17.79661,64.618439 17.79661,74.152543 C 17.79661,80.667556 25.093813,81.355932 38.559322,81.355932 C 89.504001,81.355932 135.59322,-21.186441 135.59322,-21.186441" />
+              <path class="line line6" d="M 50,35 H 30 C 30,35 16.525424,35.528154 16.525424,24.152542 C 16.525424,17.535987 22.597755,13.559322 39.40678,13.559322 C 80.617882,13.559322 94.067797,111.01695 94.067797,111.01695" />
+            </svg>
+            <svg class="x" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+              <path class="line" d="M 34,32 L 66,68" />
+              <path class="line" d="M 66,32 L 34,68" />
+            </svg>
+          </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>
