@@ -14,6 +14,6 @@ Make sure you have the ```live server``` extension installed in VS Code. Then fo
 
 ## Learning Resources
 
+- [Kevin Powell - The CSS god](https://www.youtube.com/@KevinPowell)
 - [CSS in 100 seconds](https://www.youtube.com/watch?v=OEV8gMkCHXQ)
 - [CSS pro tips](https://www.youtube.com/watch?v=Qhaz36TZG5Y)
-- [Kevin Powell - The CSS god](https://www.youtube.com/@KevinPowell)
